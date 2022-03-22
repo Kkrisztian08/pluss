@@ -4,12 +4,14 @@
         <table>
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Név</th>
                     <th>Müveletek</th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="plush in plushes" v-bind:key="plush.id">
+                    <td>{{ plush.id }}</td>
                     <td>{{ plush.name }}</td>
                     <td>
                         <button @click="loadEditData(plush.id)">Szerkesztés</button>
@@ -17,6 +19,9 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>
+                        
+                    </td>
                     <td>
                         <input type="text" v-model="plush.name">
                     </td>
